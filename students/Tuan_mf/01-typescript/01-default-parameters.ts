@@ -9,7 +9,7 @@ var link = function (height?, color?, url?) { //có ? thì có giá trị sau đ
 link();
 link(100);
 link(150, "blue");
-link(100, 'yellow', 'http://facebook.com');
+link(100, 'yellow', 'http://fb.com');
 link(null, '', 0);
 console.log('---------------------------------------------');
 var a1 = undefined;
