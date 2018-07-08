@@ -21,7 +21,7 @@ var clickMe = function () {
             lastName: 'Tran'
         }
     ];
-    var newPersons = persons.map(function (person) { return person.firstName; });
+    var newPersons = persons.map(function (e) { return e.firstName; });
     console.log(newPersons);
 };
 document.getElementById('btn1').addEventListener('click', clickMe);

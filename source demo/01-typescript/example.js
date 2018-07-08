@@ -14,3 +14,24 @@ alert(sum1(a, b));
 alert(sum2(a, b));
 alert(sum3(a, b));
 alert(sum4(a, b));
+function test1() {
+    var a = 10;
+    {
+        var a = 15;
+    }
+    console.log(a);
+}
+function test2() {
+    var a = 10;
+    {
+        var a_1 = 15;
+    }
+    console.log(a);
+}
+function test3() {
+    var a = 10;
+    {
+        var a_2 = 15;
+    }
+    console.log(a);
+}
