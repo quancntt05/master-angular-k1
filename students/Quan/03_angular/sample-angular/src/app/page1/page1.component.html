@@ -1,0 +1,17 @@
+<div class="row mr-0 ml-0">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" [(ngModel)]="userName" [disabled]="disableInput">
+      <label>Password</label>
+      <input type="password" class="form-control" [(ngModel)]="passWord">
+      <div class="text-center mt-2">
+          <button class="btn btn-primary" (click)="click1()">Click Me 1</button>
+          <button class="btn btn-warning" (click)="click2()">Click Me 2</button>
+        <!-- <div class=""><button class="btn btn-primary" (click)="click1()">Click Me 1</button></div>
+        <div class=""><button class="btn btn-warning" (click)="click2()">Click Me 2</button></div> -->
+      </div>
+    </div>
+  </div>
+</div>
