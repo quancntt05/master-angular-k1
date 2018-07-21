@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <button id="btn1" class="btn btn-sm btn-outline-secondary">Button 1</button>
+    <button id="btn2" class="btn btn-sm btn-outline-primary">Button 2</button>
+    <button id="btn3" class="btn btn-sm btn-success">Button 3</button>
+    <button id="btn4" class="btn btn-sm btn-info">Button 4</button>
+    <input id="ipt1" class="form-control form-control-sm">
+    <button id="btn5" class="btn btn-sm btn-info">Button 5</button>
+    <label id="lbl1">Super</label>
+    <label id="lbl2">Dev</label>
+    <button id="btn6" class="btn btn-sm btn-info">Button 6</button>
+</body>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $('#btn1').click(function () {
+        $('#btn3').removeClass();
+        $('#btn3').addClass('btn btn-sm btn-warning');
+    });
+    $('#btn2').click(function () {
+        $('#btn3').removeClass();
+        $('#btn3').addClass('btn btn-sm btn-success');
+    });
+    $('#btn3').click(function(){
+        $('#btn3').css('background-color','rgb(255, 0, 0, 0.5)');
+    });
+    $('#btn4').click(function(){
+        console.log($('#btn3').css('background-color'));
+    });
+    $('#btn5').click(function(){
+        console.log($('#ipt1').val());
+        $('#ipt1').val('New Value');
+    });
+    $('#btn6').click(function(){
+        console.log($('#lbl1').text());
+    });
+    </script>
+</html>

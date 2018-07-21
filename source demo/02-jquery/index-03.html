@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Bài tập 1 -->
+    <!-- Bấm button khiến chữ Dark thành màu đỏ -->
+    <div id="bt1">
+        <label>Super</label>
+        <label>Dev</label>
+        <label>Dark</label>
+        <label>Peter</label>
+    </div>
+    <button id="btn1" class="btn btn-sm btn-primary">Btn 1</button>
+</body>
+<script src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    var interval;
+    $('#btn1').click(function () {
+        interval = setInterval(function () {
+            if ($('#bt1 label:nth-child(3)').css('color') === 'rgb(0, 255, 0)')
+                $('#bt1 label:nth-child(3)').css('color', 'rgb(0, 0, 255)');
+            else if ($('#bt1 label:nth-child(3)').css('color') === 'rgb(0, 0, 255)')
+                $('#bt1 label:nth-child(3)').css('color', 'rgb(255, 0, 0)');
+            else $('#bt1 label:nth-child(3)').css('color', 'rgb(0, 255,0)');
+        }, 1000);
+    });
+</script>
+
+</html>
