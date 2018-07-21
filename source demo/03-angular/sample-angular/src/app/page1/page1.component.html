@@ -1,0 +1,12 @@
+<div class="row mr-0 ml-0">
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>First Name</label>
+      <input class="form-control" [(ngModel)]="firstName" [disabled]="disableInput">
+      <div class="text-center">
+          <button class="btn btn-primary" (click)="click1()" *ngIf="firstName !='SuperDev'">Click Me</button>
+          <button class="btn btn-warning" (click)="click2()">Click Me</button>
+      </div>
+    </div>
+  </div>
+</div>
