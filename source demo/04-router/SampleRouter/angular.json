@@ -23,9 +23,27 @@
               "src/assets"
             ],
             "styles": [
+              "src/assets/pike-admin/plugins/switchery/switchery.min.css",
+              "src/assets/pike-admin/css/bootstrap.min.css",
+              "src/assets/pike-admin/font-awesome/css/font-awesome.min.css",
+              "src/assets/pike-admin/css/style.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/pike-admin/js/modernizr.min.js",
+              "src/assets/pike-admin/js/jquery.min.js",
+              "src/assets/pike-admin/js/moment.min.js",
+              "src/assets/pike-admin/js/popper.min.js",
+              "src/assets/pike-admin/js/bootstrap.min.js",
+              "src/assets/pike-admin/js/detect.js",
+              "src/assets/pike-admin/js/fastclick.js",
+              "src/assets/pike-admin/js/jquery.blockUI.js",
+              "src/assets/pike-admin/js/jquery.nicescroll.js",
+              "src/assets/pike-admin/js/jquery.scrollTo.min.js",
+              "src/assets/pike-admin/plugins/switchery/switchery.min.js",
+              "src/assets/pike-admin/plugins/waypoints/lib/jquery.waypoints.min.js",
+              "src/assets/pike-admin/plugins/counterup/jquery.counterup.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -74,7 +92,8 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
