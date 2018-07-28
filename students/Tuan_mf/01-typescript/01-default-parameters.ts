@@ -6,12 +6,17 @@ var link = function (height?, color?, url?) { //có ? thì có giá trị sau đ
     console.log(color);
     console.log(url);
 }
+console.log("-----------------link()----------------------------")
 link();
+console.log("-----------------link(100)----------------------------")
 link(100);
+console.log('-----------------link(150,"blue")----------------------------');
 link(150, "blue");
+console.log('-----------------link(100,"yellow","http://fb.com")----------------------------');
 link(100, 'yellow', 'http://fb.com');
+console.log('-----------------link(null)----------------------------');
 link(null, '', 0);
-console.log('---------------------------------------------');
+
 var a1 = undefined;
 var b1 = null;
 var c1 = false;
