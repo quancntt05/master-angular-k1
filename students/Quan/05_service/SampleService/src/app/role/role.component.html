@@ -1,0 +1,24 @@
+<table class="table table-reponsive table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Code</th>
+      <th scope="col">Description</th>
+      <th scope="col">DistrictID</th>
+      <th scope="col">DistrictName</th>
+      <th scope="col">IsRepresentative</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items; let idx = index" 
+    [ngClass]="{'table-success':item.IsRepresentative,'table-danger':!item.IsRepresentative}">
+      <th>{{idx+1}}</th>
+      <td>{{item.Code}}</td>
+      <td>{{item.Description}}</td>
+      <td><span class="label" 
+        [ngClass]="{'bg-success':item.IsRepresentative,'bg-danger':!item.IsRepresentative}">{{item.DistrictID}}</span></td>
+      <td>{{item.DistrictName}}</td>
+      <td>{{item.IsRepresentative}}</td>
+    </tr>
+    </tbody>
+</table>
