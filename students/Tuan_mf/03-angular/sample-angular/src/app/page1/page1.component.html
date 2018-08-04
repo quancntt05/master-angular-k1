@@ -1,0 +1,20 @@
+<div class="row mr-0 ml-0">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>{{firstName}}</label>
+      <input class="form-control mt-1" [(ngModel)]="firstName" [disabled]="disableInput" type="text">
+      <button class="btn btn-primary mt-2" (click)="click1()" [disabled]="firstName=='SuperDev'">Click Me</button>
+      <button class="btn btn-secondary mt-2" (click)="click2()" *ngIf="firstName!='SuperDev'">Click Me</button>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-6">
+      <div class="form-group">
+        <label>Username</label>
+        <input class="form-control mt-1" [(ngModel)]="userName" type="text">
+        <label>PassWord</label>
+        <input class="form-control mt-1" [(ngModel)]="passWord" type="password">
+        <button class="btn btn-primary mt-2" (click)="login()">Login</button>
+      </div>
+    </div> -->
+</div>
