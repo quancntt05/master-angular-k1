@@ -11,7 +11,7 @@ export class RoleComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit() {
-    this.api.post('http://api.serverapi.host/api/v1/apiv3/GetDistricts',{
+    this.api.post('https://api.serverapi.host/api/v1/apiv3/GetDistricts',{
       "token": "TokenStaging"
     }).then(res => {
       this.items = res.json().data;
