@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import {FormsModule} from '@angular/forms'
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component';
@@ -12,7 +13,7 @@ import { UtilityService } from './services/utility.service';
 import { ApiService } from './services/api.service';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'main', pathMatch: 'full' },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
     path: 'main', component: MainComponent, children:
       [
@@ -35,6 +36,7 @@ const routes: Routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpModule,
+    FormsModule
   ],
   providers: [UtilityService,ApiService],
   bootstrap: [AppComponent]
