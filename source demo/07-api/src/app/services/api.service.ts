@@ -30,6 +30,25 @@ export class ApiService {
     //return this.http.post(this.host + url,data).toPromise();
   }
 
+  get(url: string) {
+    let headers = new Headers();
+    headers.append('token', this.currentUser.token || '');
+    let promise = new Promise((resolve, reject) => {
+      this.http.get(this.host + url, { headers: headers }).toPromise().then(res => {
+        resolve(res.json());
+      }).catch(err => {
+        if (typeof (err) === 'string') reject(err);
+        else if (typeof (err) === 'object' && err.json && typeof (err.json().Message) === 'string') reject(err.json().Message);
+        else {
+          console.error(err);
+          reject('UNKNOWN_ERROR');
+        }
+      });
+    });
+    return promise;
+    //return this.http.post(this.host + url,data).toPromise();
+  }
+
   saveUser(user: any) {
     this.currentUser = user;
     localStorage.setItem('260f3688-1dae-4b43-9581-95474f619b86', JSON.stringify(this.currentUser));
