@@ -21,17 +21,26 @@
       <a target="_blank" href="https://getbootstrap.com/docs/4.0/content/tables/#bordered-table">(more info)</a>
     </div>
     <div class="card-body">
+      <button class="btn btn-primary btn-sm mb-2" (click)="detail()">
+        <i class="fa fa-plus"></i> New Role</button>
       <table class="table table-sm table-reponsive table-bordered table-striped table-hover">
         <thead class="thead-light">
           <tr>
-            <th class="text-center" style="width:50px">#</th>
+            <th class="text-center" style="width:5rem">#</th>
             <th style="width:200px">Name</th>
             <th>Description</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let item of items;let idx = index">
-            <th>{{idx+1}}</th>
+          <tr *ngFor="let item of items">
+            <th>
+              <button class="btn btn-sm btn-primary" (click)="detail(item)">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-danger ml-2">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </th>
             <td>{{item.Name}}</td>
             <td>{{item.Description}}</td>
           </tr>

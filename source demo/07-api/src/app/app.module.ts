@@ -11,6 +11,7 @@ import { RoleComponent } from './role/role.component';
 import { UserComponent } from './user/user.component';
 import { UtilityService } from './services/utility.service';
 import { ApiService } from './services/api.service';
+import { RoleDetailComponent } from './role/role-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
     path: 'main', component: MainComponent, children:
       [
         { path: 'role', component: RoleComponent },
+        { path: 'role-detail/:id', component: RoleDetailComponent },
         { path: 'user', component: UserComponent },
       ]
   },
@@ -30,6 +32,7 @@ const routes: Routes = [
     MainComponent,
     LoginComponent,
     RoleComponent,
+    RoleDetailComponent,
     UserComponent
   ],
   imports: [
