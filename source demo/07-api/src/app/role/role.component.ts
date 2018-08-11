@@ -14,11 +14,19 @@ export class RoleComponent implements OnInit {
     private apiService: ApiService) { }
 
   ngOnInit() {
+    this.load();
+  }
+
+  load() {
     this.apiService.post('api/role/all', null).then((res: any[]) => this.items = res);
   }
 
   detail(item?: any) {
     if (item) this.router.navigate(['main/role-detail', item.Id]);
     else this.router.navigate(['main/role-detail', '']);
+  }
+
+  delete(item: any) {
+    this.apiService.delete(`api/role/delete?id=${item.Id}`).then(() => this.load());
   }
 }

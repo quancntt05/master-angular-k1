@@ -46,7 +46,24 @@ export class ApiService {
       });
     });
     return promise;
-    //return this.http.post(this.host + url,data).toPromise();
+  }
+
+  delete(url: string) {
+    let headers = new Headers();
+    headers.append('token', this.currentUser.token || '');
+    let promise = new Promise((resolve, reject) => {
+      this.http.delete(this.host + url, { headers: headers }).toPromise().then(res => {
+        resolve();
+      }).catch(err => {
+        if (typeof (err) === 'string') reject(err);
+        else if (typeof (err) === 'object' && err.json && typeof (err.json().Message) === 'string') reject(err.json().Message);
+        else {
+          console.error(err);
+          reject('UNKNOWN_ERROR');
+        }
+      });
+    });
+    return promise;
   }
 
   saveUser(user: any) {
