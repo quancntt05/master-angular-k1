@@ -3,6 +3,7 @@ import { UtilityService } from '../services/utility.service';
 import { ApiService } from '../services/api.service';
 import { Router } from '@angular/router';
 import { NotifyService } from '../services/notify.service';
+import { LoadingService } from '../services/loading.service';
 
 @Component({
   selector: 'app-role',
@@ -13,6 +14,7 @@ export class RoleComponent implements OnInit {
   items: any[] = [];
   constructor(private router: Router,
     private notifyService: NotifyService,
+    private loadingService: LoadingService,
     private apiService: ApiService) { }
 
   ngOnInit() {
@@ -20,11 +22,17 @@ export class RoleComponent implements OnInit {
   }
 
   load() {
-    this.apiService.post('api/role/all', null).then((res: any[]) => this.items = res);
+    this.loadingService.start();
+    this.apiService.post('api/role/all', null)
+      .then((res: any[]) => {
+        this.loadingService.stop();
+        this.items = res;
+      });
   }
 
-  success(){
-    this.notifyService.success('TEST');
+  success() {
+    //this.notifyService.success('TEST');
+    this.loadingService.start();
   }
 
   detail(item?: any) {

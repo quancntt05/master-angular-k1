@@ -13,6 +13,7 @@ import { UtilityService } from './services/utility.service';
 import { ApiService } from './services/api.service';
 import { RoleDetailComponent } from './role/role-detail.component';
 import { NotifyService } from './services/notify.service';
+import { LoadingService } from './services/loading.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -42,7 +43,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [UtilityService, NotifyService, ApiService],
+  providers: [UtilityService, NotifyService, LoadingService, ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
