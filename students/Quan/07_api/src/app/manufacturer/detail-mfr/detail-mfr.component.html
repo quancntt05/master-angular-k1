@@ -1,0 +1,24 @@
+<div class="card">
+  <div class="card-header">
+    <h3>Detail Manufacturer</h3>
+  </div>
+    
+  <div class="card-body">								
+    <div class="row">
+      <div class="col-md-6">
+        <label>Name</label>
+        <input type="text" class="form-control form-control" [(ngModel)]="entity.Name">
+      </div>
+      <div class="col-md-6">
+        <label>Description</label>
+        <input type="text" class="form-control form-control" [(ngModel)]="entity.Description">
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-primary mt-2" (click)="saveMfr()">Save</button>
+          <button class="btn btn-danger mt-2 ml-2" (click)="backHome()">Back</button>
+          </div>
+    </div>
+  </div>														
+</div>
