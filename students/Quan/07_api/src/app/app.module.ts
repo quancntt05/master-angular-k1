@@ -18,6 +18,8 @@ import { ManufacturerComponent } from './manufacturer/manufacturer.component';
 import { DetailMfrComponent } from './manufacturer/detail-mfr/detail-mfr.component';
 import { CategoryComponent } from './category/category.component';
 import { CatDetailComponent } from './category/cat-detail/cat-detail.component';
+import { ProductComponent } from './product/product.component';
+import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
@@ -33,6 +35,8 @@ const routes: Routes = [
         { path: 'mfr-detail/:id', component: DetailMfrComponent },
         { path: 'cat', component: CategoryComponent },
         { path: 'cat-detail/:id', component: CatDetailComponent },
+        { path: 'product', component: ProductComponent },
+        { path: 'product-detail/:id', component: ProductDetailComponent },
 
       ]
   },
@@ -52,7 +56,9 @@ const routes: Routes = [
     ManufacturerComponent,
     DetailMfrComponent,
     CategoryComponent,
-    CatDetailComponent
+    CatDetailComponent,
+    ProductComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

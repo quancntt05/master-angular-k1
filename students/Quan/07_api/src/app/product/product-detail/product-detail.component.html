@@ -1,0 +1,46 @@
+<div class="card">
+    <div class="card-header">
+      <h3>Detail Product</h3>
+    </div>
+      
+    <div class="card-body">								
+      <div class="row">
+        <div class="col-md-6">
+          <label>Product Code</label>
+          <input type="text" class="form-control form-control" [(ngModel)]="entity.Code">
+        </div>
+        <div class="col-md-6">
+          <label>Product Name</label>
+          <input type="text" class="form-control form-control" [(ngModel)]="entity.Name">
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-6">
+            <label>Category</label>
+            <select class="form-control form-control" [(ngModel)]="entity.CategoryId">
+              <option *ngFor="let category of categories" [value]="category.Id">{{category.Name}}</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+            <label>Unit</label>
+            <select class="form-control form-control" [(ngModel)]="entity.UnitId">
+                <option *ngFor="let unit of units" [value]="unit.Id">{{unit.Name}}</option>
+                </select>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <label>Manufacturer</label>
+                <select class="form-control form-control" [(ngModel)]="entity.ManufacturerId">
+                  <option *ngFor="let manufacturer of manufacturers" [value]="manufacturer.Id">{{manufacturer.Name}}</option>
+                  </select>
+            </div>
+          </div>
+      <div class="row">
+          <div class="col-md-6">
+            <button class="btn btn-primary mt-2" (click)="saveProduct()">Save</button>
+            <button class="btn btn-danger mt-2 ml-2" (click)="backHome()">Back</button>
+            </div>
+      </div>
+    </div>														
+  </div>

@@ -1,0 +1,37 @@
+<div class="card">
+    <div class="card-header">
+      <h3>List Product</h3>
+    </div>
+      
+    <div class="card-body">								
+      <button class="btn btn-primary mb-2" (click)="detailProduct()"><i class="fa fa-plus mr-2" ></i>Add Product</button>
+      <table class="table table-reponsive table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th class="text-center" style="width:120px"></th>
+          <th style="width:150px">Item Code</th>
+          <th style="width:150px">Item Name</th>
+          <th style="width:150px">Unit Id</th>
+          <th style="width:150px">Category Id</th>
+          <th style="width:150px">Manufacturer Id</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of items">
+          <th class="text-center">
+            <button class="btn btn-info mr-1" (click)="detailProduct(item)"><i class="fa fa-pencil"></i></button>
+            <button class="btn btn-danger" (click)="deleteProduct(item)"><i class="fa fa-trash"></i></button>
+          </th>
+          <td class="align-middle">{{item.Code}}</td>
+          <td class="align-middle">{{item.Name}}</td>
+          <td class="align-middle">{{item.UnitId}}</td>
+          <td class="align-middle">{{item.CategoryId}}</td>
+          <td class="align-middle">{{item.ManufacturerId}}</td>
+          <td class="align-middle">{{item.Description}}</td>
+        </tr>
+        </tbody>
+      </table>
+      
+    </div>														
+  </div>
