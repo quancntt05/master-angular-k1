@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xl-12">
+      <div class="breadcrumb-holder">
+        <h1 class="main-title float-left">User</h1>
+        <ol class="breadcrumb float-right">
+          <li class="breadcrumb-item">Home</li>
+          <li class="breadcrumb-item active">Dashboard</li>
+        </ol>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!-- end row -->
+  <div class="card">
+    <div class="card-header">
+      <h3>
+        <i class="fa fa-table"></i> Bordered table</h3>
+      Add
+      <i>.table-bordered</i> for borders on all sides of the table and cells.
+      <a target="_blank" href="https://getbootstrap.com/docs/4.0/content/tables/#bordered-table">(more info)</a>
+    </div>
+    <div class="card-body">
+      <button class="btn btn-primary btn-sm mb-2" (click)="detail()">
+        <i class="fa fa-plus"></i> New User</button>
+        <!-- <button class="btn btn-primary btn-sm mb-2 ml-2" (click)="success()">
+          <i class="fa fa-plus"></i> Test success</button> -->
+      <table class="table table-sm table-reponsive table-bordered table-striped table-hover">
+        <thead class="thead-light">
+          <tr>
+            <th class="text-center" style="width:5rem">#</th>
+            <th style="width:150px">Username</th>
+            <th style="width:150px">FirstName</th>
+            <th style="width:150px">LastName</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of items">
+            <th>
+              <button class="btn btn-sm btn-primary" (click)="detail(item)">
+                <i class="fa fa-pencil"></i>
+              </button>
+              <button class="btn btn-sm btn-danger ml-2" (click)="delete(item)">
+                <i class="fa fa-trash-o"></i>
+              </button>
+            </th>
+            <td>{{item.Username}}</td>
+            <td>{{item.FirstName}}</td>
+            <td>{{item.LastName}}</td>
+            <td>{{item.Description}}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</div>
+<!-- END container-fluid -->
