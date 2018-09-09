@@ -1,0 +1,11 @@
+<span *ngIf="label" class="label-swm">{{label}}
+    <span class="text-danger" *ngIf="required">*</span>
+</span>
+<div class="input-group" [ngClass]="{'input-group-sm': size === 'sm','input-group-xs': size==='xs'}">
+    <div class="input-group-append">
+        <span class="input-group-text px-1 border-right-0" [ngStyle]="{'background':disabled?'#E9ECEF':'#FFF'}">
+            <i class="fa" [ngClass]="{'fa-clock-o':type === 'time', 'fa-calendar':type !== 'time'}"></i>
+        </span>
+    </div>
+    <input #control class="form-control border-left-0" [ngModel]="date" [disabled]="disabled">
+</div>

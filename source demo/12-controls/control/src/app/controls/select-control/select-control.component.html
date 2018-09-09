@@ -1,0 +1,4 @@
+<span class="c-label">{{label}}<span *ngIf="required" class="text-danger">*</span></span>
+<select class="form-control form-control-sm" [ngModel]="_model" (ngModelChange)="input($event)">
+  <option *ngFor="let item of items" [value]="item[valueField]">{{item[displayField]}}</option>
+</select>

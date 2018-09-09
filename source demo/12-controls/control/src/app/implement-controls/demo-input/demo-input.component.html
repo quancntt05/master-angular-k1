@@ -1,11 +1,12 @@
 <div class="row mr-0 ml-0 mt-3">
+  <button class="btn btn-primary" (click)="click()"> Click Me</button>
   <div class="col-md-4">
-    <app-input-control [label]="'Label1'" [required]="true"></app-input-control>
+    <app-input-control [label]="'Label1'" [required]="true" [(model)]="input1"></app-input-control>
   </div>
   <div class="col-md-4">
-    <app-input-control [label]="'Label2'"></app-input-control>
+    <app-input-control [label]="'Label2'" [required]="input1 === 'Super'" [(model)]="input2"></app-input-control>
   </div>
   <div class="col-md-4">
-    <app-input-control [label]="'Label3'" [required]="true"></app-input-control>
+    <app-input-control [label]="'Label3'" [required]="true" [(model)]="input3"></app-input-control>
   </div>
 </div>
