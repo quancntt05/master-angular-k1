@@ -1,15 +1,14 @@
 import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
-
+import * as uuid from 'uuid';
 @Component({
-  selector: 'app-input-control',
-  templateUrl: './input-control.component.html',
-  styleUrls: ['./input-control.component.css']
+  selector: 'app-check-box-control',
+  templateUrl: './check-box-control.component.html',
+  styleUrls: ['./check-box-control.component.css']
 })
-export class InputControlComponent implements OnInit {
+export class CheckBoxControlComponent implements OnInit {
   @Input() label: string;
-  @Input() required: boolean = false;
 
-  _model: any;
+  _model: boolean;
   @Input() set model(value) {
     this._model = value;
     this.ref.detectChanges();
@@ -17,10 +16,13 @@ export class InputControlComponent implements OnInit {
   @Output() modelChange = new EventEmitter();
   constructor(private ref: ChangeDetectorRef) { }
 
+  id = uuid.v4();
+
   ngOnInit() {
   }
 
   input(value) {
+    console.log(value);
     this._model = value;
     this.modelChange.emit(this._model);
   }

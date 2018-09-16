@@ -7,6 +7,8 @@ import { InputControlComponent } from './controls/input-control/input-control.co
 import { DemoInputComponent } from './implement-controls/demo-input/demo-input.component';
 import { SelectControlComponent } from './controls/select-control/select-control.component';
 import { DemoSelectComponent } from './implement-controls/demo-select/demo-select.component';
+import { CheckBoxControlComponent } from './controls/check-box-control/check-box-control.component';
+import { DemoCheckBoxComponent } from './implement-controls/demo-check-box/demo-check-box.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { DemoSelectComponent } from './implement-controls/demo-select/demo-selec
     InputControlComponent,
     DemoInputComponent,
     SelectControlComponent,
-    DemoSelectComponent
+    DemoSelectComponent,
+    CheckBoxControlComponent,
+    DemoCheckBoxComponent
   ],
   imports: [
     BrowserModule,
