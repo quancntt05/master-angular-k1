@@ -1,0 +1,48 @@
+<div class="p-3">
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#hashtagSearch">Hashtag Search</a></li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#userSearch">User Search</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="hashtagSearch" class="tab-pane fade show active p-4">
+      <div class="row">
+        <div class="col col-12 col-sm-6 col-lg-3">
+          <div class="form-group">
+            <label>Twitter HashTag</label>
+            <div class="input-group input-group--search">
+              <input [(ngModel)]="search" type="search" class="form-control" placeholder="Search" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <section *ngIf="totalTweets">
+          <table class="table table-sm table-bordered" style="width:100%">
+            <tr>
+              <td>Tweet</td>
+              <td>Likes</td>
+              <td>Replies</td>
+              <td>Retweet</td>
+              <td>Hashtags</td>
+              <td>Date</td>
+            </tr>
+            <tr *ngFor="let tweet of viewTweets">
+              <td>{{ tweet.tweet }}</td>
+              <td>{{ tweet.likes || '-' }}</td>
+              <td>{{ tweet.replies || '-' }}</td>
+              <td>{{ tweet.retweets || '-' }}</td>
+              <td>{{ tweet.hashtag }}</td>
+              <td>{{ tweet.date | date}}</td>
+            </tr>
+          </table>
+        </section>
+      </div>
+    </div>
+    <div id="userSearch" class="tab-pane fade">
+      <h3>This is User Page</h3>
+    </div>
+  </div>
+</div>
